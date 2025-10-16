@@ -2,100 +2,114 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AutoDrive Motors</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Car Dealership</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #222;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    .car-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 20px;
+    }
+    .car-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+    .car-card:hover {
+      transform: scale(1.05);
+    }
+    .car-image {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .car-details {
+      padding: 15px;
+      text-align: center;
+    }
+    .car-name {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    .car-description {
+      font-size: 0.9em;
+      color: #666;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #222;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-  <header class="hero">
-    <h1>Drive Away with Confidence</h1>
-    <p>Explore our premium selection of sedans, SUVs, trucks, and electric vehicles.</p>
-    <a href="#inventory" class="cta-button">Browse Inventory</a>
+  <header>
+    <h1>Welcome to Elite Car Dealership</h1>
   </header>
 
-  <section id="inventory" class="listings">
-    <h2>Featured Vehicles</h2>
-    <div class="card">
-      <img src="images/toyota-camry.jpg" alt="Toyota Camry 2022" />
-      <h3>2022 Toyota Camry</h3>
-      <p>Mileage: 15,000 km | Automatic | Petrol</p>
-      <p class="price">$24,500</p>
-      <a href="#" class="cta-button">Schedule Test Drive</a>
+  <div class="container">
+    <div class="car-grid">
+      <div class="car-card">
+        <img class="car-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/2018_Toyota_Camry_XLE_front_6.6.19.jpg/800px-2018_Toyota_Camry_XLE_front_6.6.19.jpg" alt="Toyota Camry" />
+        <div class="car-details">
+          <div class="car-name">Toyota Camry</div>
+          <div class="car-description">Reliable, efficient midsize sedan with advanced safety features.</div>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <img class="car-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Mercedes-Benz_W222_IMG_0010.jpg/800px-Mercedes-Benz_W222_IMG_0010.jpg" alt="Mercedes-Benz S-Class" />
+        <div class="car-details">
+          <div class="car-name">Mercedes-Benz S-Class</div>
+          <div class="car-description">Luxury flagship sedan with cutting-edge technology and comfort.</div>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <img class="car-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Audi_A6_C7_IMG_0057.jpg/800px-Audi_A6_C7_IMG_0057.jpg" alt="Audi A6" />
+        <div class="car-details">
+          <div class="car-name">Audi A6</div>
+          <div class="car-description">Sporty executive sedan blending performance with style.</div>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <img class="car-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/2016_BMW_750Li_xDrive_front_4.26.18.jpg/800px-2016_BMW_750Li_xDrive_front_4.26.18.jpg" alt="BMW 7 Series" />
+        <div class="car-details">
+          <div class="car-name">BMW 7 Series</div>
+          <div class="car-description">Premium luxury sedan with dynamic driving and advanced features.</div>
+        </div>
+      </div>
     </div>
-    <div class="card">
-      <img src="images/tesla-model3.jpg" alt="Tesla Model 3 2023" />
-      <h3>2023 Tesla Model 3</h3>
-      <p>Mileage: 5,000 km | Electric | Autopilot</p>
-      <p class="price">$39,900</p>
-      <a href="#" class="cta-button">Schedule Test Drive</a>
-    </div>
-    <!-- Add more vehicle cards as needed -->
-  </section>
+  </div>
 
   <footer>
-    <p>&copy; 2025 AutoDrive Motors. All rights reserved.</p>
-    <p>Contact: info@autodrive.com | +254 712 345678</p>
+    &copy; 2025 Elite Car Dealership. All rights reserved.
   </footer>
 </body>
 </html>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f4f4f4;
-}
-
-.hero {
-  background: url('images/showroom.jpg') center/cover no-repeat;
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
-}
-
-.cta-button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #ff4d4d;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.listings {
-  padding: 40px 20px;
-  background: white;
-}
-
-.listings h2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.card {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  margin: 20px auto;
-  max-width: 400px;
-  padding: 20px;
-  text-align: center;
-}
-
-.card img {
-  max-width: 100%;
-  border-radius: 5px;
-}
-
-.price {
-  font-size: 1.2em;
-  color: #333;
-  margin: 10px 0;
-}
-
-footer {
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
